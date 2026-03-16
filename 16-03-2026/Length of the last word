@@ -1,0 +1,17 @@
+class Solution {
+    public int lengthOfLastWord(String s) {
+        int lastWordLength=0;
+        int currIndex=s.length()-1;
+        while(currIndex>=0 && s.charAt(currIndex)==' ')
+        {
+            currIndex--;
+        }
+
+        while(currIndex>=0 && s.charAt(currIndex)!=' ')
+        {
+            lastWordLength++;
+            currIndex--;
+        }
+        return lastWordLength;
+    }
+}
